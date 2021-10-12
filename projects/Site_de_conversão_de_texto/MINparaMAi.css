@@ -1,0 +1,38 @@
+h2 {
+    font: bold 20pt Arial;
+    color: white
+}
+p {
+    font:normal 15pt Arial;
+    color: white
+}
+textarea {
+    font: normal 12pt Arial; 
+    background-color: rgb(24, 24, 24);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    border:white solid 1px;
+    outline: none;
+}
+
+input {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font: normal 14pt Arial;
+    padding: 10px;
+    border: white groove 1px;
+    border-radius: 10px;
+    outline: none;
+
+}
+input:hover{
+    background-color: rgb(8, 8, 8);
+    cursor: pointer; 
+}
+body {
+    background-color: rgb(24, 24, 24);
+    font:normal 15pt Arial;
+    color: white;
+}

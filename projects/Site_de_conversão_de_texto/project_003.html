@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="F°paraC°.css">
+    <title>Converter fahrenheit para Celsius</title>
+</head>
+<style>
+
+</style>
+<body>
+    <section id=square>
+    <article>
+    <h1>Converter F° para C°</h1>
+    <p>Escreva graus em fehrenheit para o programa converter para graus Celsius:</p>
+    </article>
+    <input type="number" name="fehrenheit" id="F" placeholder="Digite graus em F°(fahrenheit)">
+    <input id="b" type="button" value="Converter" onclick=conta()>
+    <div>Resposta:<br></div>
+    <div id="res"></div>
+    </section>
+    <aside>
+        <h2>Converta tambem:</h2>
+        <hr>
+        <div>
+        <a href="project_002.html"><ul>
+            <img id='MparaM' src="imagens/letra-minuscula (1).png" alt=""><li>Maúsculas / Minúsculas</li>
+        </ul>
+        </a>
+        </div>
+    </aside>
+    <script>
+        var b = document.querySelector('input#b');
+        b.addEventListener('mouseenter', entermouse)
+        b.addEventListener('mouseout', outmouse)
+        function entermouse() {
+            b.style.transition = 0.5
+            b.style.background = 'rgb(40, 40, 40)'
+            b.style.border = '2px groove rgb(40, 40, 40)'
+        }
+        function outmouse() {
+            b.style.transition = 0
+            b.style.background = 'rgb(50, 50, 50)'
+        }
+        function conta() {
+            var f = document.getElementById('F').value;
+            var cont = (Number(f)-32)*5/9
+            res.innerHTML = `${f}°F = ${Number(cont)}°C`
+            res.style.color = 'white'
+            res.style.font = 'bold 28pt Arial'
+        }
+    </script>
+</body>
+</html>

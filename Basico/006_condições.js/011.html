@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro</title>
+</head>
+<body>
+    <h1>Estrangeiro ou Brasileiro</h1>
+    <p>Escreva abaixo que país você mora:</p>
+    <input type="text" name="pais" id="pais">
+    <input type="button" 
+    value="Mostre-me" onclick='paises()'>
+    <div id='res'>resultado...</div>
+    <script>
+        function paises(){
+            var txt1 = document.getElementById('pais').value;
+            var res = document.getElementById('res');
+            if (txt1 === 'brasil') {
+                res.innerHTML = `Brasileiro`
+            }
+            else {
+                res.innerHTML = `Estrangeiro`
+            }
+            
+        }
+    </script>
+
+</html>

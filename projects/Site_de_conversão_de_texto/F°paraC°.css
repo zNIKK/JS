@@ -1,0 +1,97 @@
+aside {
+    display: block;
+    width: 30%;
+    margin: center;
+    float: right;
+}
+section#square {
+    display: block;
+    background:rgb(14, 14, 14);
+    border-radius: 15px;
+    border: 1px solid white;
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+    float: left;
+}
+body {
+    background: rgb(24, 24, 24)
+}
+h1 {
+    font: bold 20pt Arial;
+    color:white;
+}
+h2 {
+    font: normal 15pt Arial;
+    color: white
+}
+p {
+    font: normal 14pt Arial;
+    color:white;
+}
+div {
+    font: normal 14pt Arial;
+    color:white
+}
+input[type=number]{
+    width: 40%;
+    font: normal 14pt Arial;  
+    background:rgb(24, 24, 24);
+    color: white;
+    border: 2px solid #555;
+    margin: 8px 0;
+    border-color:rgb(50, 50, 50);
+    border-radius: 13px;
+    transition: 0.5s;
+    padding: 10px 40px;
+    outline: none;
+    -webkit-transition: 0.5;
+    -webkit-appearance: none;
+}
+input[type=number]:focus {
+    border: 2px groove black
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+input[type=button] {
+    background: rgb(50, 50, 50);
+    color: white;
+    font: normal 14pt Arial;
+    border:1px solid rgb(50, 50, 50);
+    padding: 10px 15px;
+    border-radius: 13px;
+}
+
+a {
+    text-decoration: none;
+
+}
+ul {
+    margin: auto;
+    padding:auto;
+    height: 80px;
+    list-style: none;
+}
+
+li {
+    position: relative;
+    font: bold 16pt Arial; 
+    color: white;
+    bottom: 40px;
+    left: 70px;
+}
+img#MparaM {
+    position: relative;
+    weight: 70px;
+    height: 70px;
+    right: 25px
+}
+
+div:hover {
+    cursor: pointer;
+    background: rgb(50, 50, 50);
+    transition: 0.2s;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+<style>
+    div#Quadrado {
+        font: bold 20px Arial;
+        padding: 30px;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        border-radius: 1px;
+        background-color: black;
+        color: white;
+        line-height: 100px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="Quadrado" onmouseenter="quadradoMuda(1)" onmouseout="quadradoMuda(2)" onclick="quadradoMuda(3)">
+        Quadrado
+    </div>
+    <script>
+        var q = document.getElementById('Quadrado')
+        function quadradoMuda(tipo) {
+            if (tipo == 1) {
+                q.style.borderRadius = "100px"
+                q.style.transition = "1s"
+                q.innerText = 'Circulo'
+
+            }
+            if (tipo == 2) {
+                q.style.background='black'
+                q.style.color='white'
+                q.style.borderRadius = "1px"
+                q.style.transition = "1s"
+                q.innerText = 'Quadrado'
+            }
+            if (tipo == 3) {
+                q.style.background = "purple"
+                q.style.color = "white"
+                q.style.transition = "0.2"
+            }
+        }
+    </script>
+</body>
+</html>
