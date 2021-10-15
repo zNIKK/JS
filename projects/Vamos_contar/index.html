@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super contador</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <main>
+        <p>
+            <label for="int-inicial">início: <input type="number" name="int-inicial" id="start"></label>
+            <label for="int-final">Fim: <input type="number" name="int-final" id="end"></label>
+            <label for="int-passo">Passo: <input type="number" name="int-passo" id="step"></label>
+            <input type="button" value="Contar" id="button" onclick="contar()">
+        </p>
+        <div>
+            <h2>Contando</h2>
+            <div id='contagem'></div>
+        </div>
+    </main>
+    <footer>
+        <p>© Cursoemvídeo</p> 
+    </footer>
+    <script>
+        let start = document.getElementById('start')
+        let end = document.getElementById('end')
+        let step = document.getElementById('step')
+        let contagem = document.getElementById('contagem')
+
+        function contar() {
+        }
+        
+
+    </script>
+</body>
+</html>
