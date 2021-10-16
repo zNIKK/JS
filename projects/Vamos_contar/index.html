@@ -12,30 +12,19 @@
         <h1>Vamos contar</h1>
     </header>
     <main>
-        <p>
-            <label for="int-inicial">início: <input type="number" name="int-inicial" id="start"></label>
-            <label for="int-final">Fim: <input type="number" name="int-final" id="end"></label>
-            <label for="int-passo">Passo: <input type="number" name="int-passo" id="step"></label>
-            <input type="button" value="Contar" id="button" onclick="contar()">
-        </p>
+        <p>início: <input type="number" name="intinicial" id="start"></p>
+        <p>Fim: <input type="number" name="intfinal" id="end"></p>
+        <p>Passo: <input type="number" name="intpasso" id="step"></p>
+        <p><input type="button" value="Contar" onclick="contar()"></p>
         <div>
-            <h2>Contando</h2>
+            <h2>Contando:</h2>
             <div id='contagem'></div>
         </div>
     </main>
     <footer>
         <p>© Cursoemvídeo</p> 
     </footer>
-    <script>
-        let start = document.getElementById('start')
-        let end = document.getElementById('end')
-        let step = document.getElementById('step')
-        let contagem = document.getElementById('contagem')
 
-        function contar() {
-        }
-        
-
-    </script>
+    <script src="script.js"> </script>
 </body>
 </html>

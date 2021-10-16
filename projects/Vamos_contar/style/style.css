@@ -1,15 +1,22 @@
 @charset "UTF-8";
 
+* {
+    font: normal 22px Arial;
+}
+
 body {
     background-color: rgb(91, 148, 255);
-    font: normal 16px Arial;
     color:white;
     text-align: center;
 }
 
+body h1 {
+    font: bolder 50px Arial;
+
+}
+
 main {
     background-color: white;
-    font: normal 17px Arial;
     color: black;
     padding: 15px;
     margin:auto;
@@ -31,9 +38,8 @@ input {
     border-color: rgba(139, 139, 139, 0.349);
 }
 
-input.button {
+input#button {
     display: block;
     padding: 6px;
-    margin-left: 15px;
-    font-size: 16px;
+    margin: 15px;
 }
