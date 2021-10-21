@@ -31,11 +31,15 @@ label {
     padding:15px;
 }
 
-input {
+input.number {
     padding: 3px;
     border-radius: 3px;
     border-style: solid;
     border-color: rgba(139, 139, 139, 0.349);
+}
+
+#contagem {
+    font-size: 30px;
 }
 
 input#button {
