@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+    font: normal 22px Arial;
+}
+
+body {
+    background-color: rgb(91, 148, 255);
+    color:white;
+    text-align: center;
+}
+
+body h1 {
+    font: bolder 50px Arial;
+
+}
+
+main {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    margin:auto;
+    text-align: left;
+    width:700px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.644);
+}
+
+label {
+    display: block;
+    padding:15px;
+}
+
+input.number {
+    padding: 3px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: rgba(139, 139, 139, 0.349);
+}
+
+#contagem {
+    font-size: 30px;
+}
+
+input#button {
+    display: block;
+    padding: 6px;
+    margin: 15px;
+}

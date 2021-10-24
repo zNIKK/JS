@@ -9,22 +9,20 @@
 </head>
 <body>
     <header>
-        <h1>Vamos contar</h1>
+        <h1>Tabuada</h1>
     </header>
     <main>
-        <p>início: <input type="number" name="intinicial" class="number" id="start"></p>
-        <p>Fim: <input type="number" name="intfinal" class="number" id="end"></p>
-        <p>Passo: <input type="number" name="intpasso" class="number" id="step"></p>
-        <p><input type="button" value="Contar" onclick="contar()"></p>
+        <p>Número: <input type="number" name="tablenum" id="number"> <input type="button" value="Gerar Tabuada" onclick="multiplicar()"></p>
+
         <div>
-            <h2>Contando:</h2>
-            <div id='contagem'></div>
+            <select name="tabuada" id="tabela" size="11">
+                <option value="valor1" selected>Digite o número da tabuada acima 😁</option>
+            </select>
         </div>
     </main>
     <footer>
         <p>© Cursoemvídeo</p> 
     </footer>
-
     <script src="script.js"> </script>
 </body>
 </html>
