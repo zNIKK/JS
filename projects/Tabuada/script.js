@@ -4,7 +4,7 @@ function multiplicar() {
     let n = Number(num.value)
     tab.innerText = ''
     c=0
-    if (String(n).length===0) {
+    if (String(num.value).length===0) {
         window.alert(" [ERRO] Valor não especificado!")
         let op = document.createElement("option")
         tab.appendChild(op)
