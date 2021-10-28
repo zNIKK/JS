@@ -1,6 +1,8 @@
 let num = [5, 8, 2, 9, 3, 7]
 num[3] = 6  //  Trocar valor ou adicionar valor se não existir
-num.push(1) // Adicionar valor no ultimo elemento
+num.push(141)
+num.push(12)
+num.push(65) // Adicionar valor no ultimo elemento
 num.sort() // Colocar todos os elementos em ordem crescente
 
 console.log(`Nosso vetor é o [${num}]`)
