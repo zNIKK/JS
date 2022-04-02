@@ -1,9 +1,11 @@
 let p = document.getElementsByTagName("p") // Todas do mesmo ID
 
-let p1 = document.getElementById("p1")
-let meuAtt = p1.getAttribute("meuAtt")
 
-console.log(meuAtt);
+let p1 = document.getElementById("p1")
+let meuAtt = p1.getAttribute("meuAtt") 
+p1.setAttribute("meuAtt", "Outro Nome") // Mudar o nome do atributo
+
+console.log(p1);
 
 p[0].innerHTML = "<h2>Novo conteúdo</h2>" // Pode usar tags HTML
 p[1].innerText = "<h2>Novo conteúdo</h2>"  // Mostra so o que aparece na tela
