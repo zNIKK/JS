@@ -5,43 +5,40 @@ function calcular() {
     let tempo = parseInt(document.getElementById("tempo").value)
 
     
-    let todos = adultos + (crianças / 2)
-    
-    let mediaCarne = 400
-    let mediaCerveja = 1200
-    let mediaRefrigerante = 1000
-    
-    if (tempo >= 6) {
-        let carne = parseFloat((todos * (mediaCarne + 250)) * 0.001);
+    let mediaCarne = carnePP(tempo) * adultos + (carnePP(tempo) / 2 * crianças) 
+    let mediaCerveja = cervejaPP(tempo) * adultos
+    let mediaRefrigerante = refrigerantePP(tempo) * adultos +(refrigerantePP(tempo) / 2 * crianças)   
 
-        let cerveja = Math.round((adultos * (mediaCerveja + 800)) / 350)
-        
-        let refrigerante = Math.round((((todos * (mediaRefrigerante + 500)) / 2) / 1000))
+    res.innerHTML = `  
+                    <p>${mediaCarne / 1000} Kg de Carne</p>
+                    <p>${Math.ceil(mediaCerveja / 355)} Latas de Cerveja</p>
+                    <p>${Math.ceil((mediaRefrigerante / 2) / 1000)} Garrafas de 2L de Refrigerante</p>
+                    `  
+    function carnePP(duracao) {
+        if (duracao >= 6) {
+            return 650
+        } else {
+            return 400
+        } 
 
-        res.innerHTML = `  
-                        <p>${carne} Kg de Carne</p>
-                        <p>${cerveja} Latas de Cerveja</p>
-                        <p>${refrigerante} Garrafas de 2L de Refrigerante</p>
-                        `
-   
-
-        
-    } else {            
-        let carne = parseFloat((todos * mediaCarne) * 0.001);
-
-        let cerveja = Math.round((adultos * mediaCerveja) / 350)
-
-        let refrigerante = Math.round(((todos * mediaRefrigerante) / 2) / 1000);
-
-        res.innerHTML = `  
-                        <p>${carne} Kg de Carne</p>
-                        <p>${cerveja} Latas de Cerveja</p>
-                        <p>${refrigerante} Garrafas de 2L de Refrigerante</p>
-                        `
-        
     }
 
+    function cervejaPP(duracao) {
+        if (duracao >= 6) {
+            return 2000
+        } else {
+            return 1200
+        } 
+    }
 
-} 
-   
+    function refrigerantePP(duracao) {
+        if (duracao >= 6) {
+            return 1500
+        } else {
+            return 1000
+        } 
 
+    }
+
+    
+}
