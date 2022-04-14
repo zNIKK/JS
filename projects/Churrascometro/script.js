@@ -4,7 +4,6 @@ function calcular() {
     let crianças = parseInt(document.getElementById("crianças").value)
     let tempo = parseInt(document.getElementById("tempo").value)
 
-    
     let mediaCarne = carnePP(tempo) * adultos + (carnePP(tempo) / 2 * crianças) 
     let mediaCerveja = cervejaPP(tempo) * adultos
     let mediaRefrigerante = refrigerantePP(tempo) * adultos +(refrigerantePP(tempo) / 2 * crianças)   
@@ -13,7 +12,8 @@ function calcular() {
                     <p>${mediaCarne / 1000} Kg de Carne</p>
                     <p>${Math.ceil(mediaCerveja / 355)} Latas de Cerveja</p>
                     <p>${Math.ceil((mediaRefrigerante / 2) / 1000)} Garrafas de 2L de Refrigerante</p>
-                    `  
+                    `
+
     function carnePP(duracao) {
         if (duracao >= 6) {
             return 650

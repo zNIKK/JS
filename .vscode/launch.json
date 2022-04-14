@@ -5,13 +5,23 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-chrome",
-            "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:5500",
-            "webRoot": "${workspaceFolder}"
-
+            "version": "0.1.0",
+            "configurations": [
+                {
+                    "type": "devtools-for-chrome",
+                    "request": "launch",
+                    "name": "Launch Chrome DevTools",
+                    "file": "${workspaceFolder}/index.html"
+                },
+                {
+                    "type": "devtools-for-chrome",
+                    "request": "attach",
+                    "name": "Attach Chrome DevTools",
+                    "url": "http://localhost:8000/"
+                }
+            ]
         }
+        
     
     
     ]
