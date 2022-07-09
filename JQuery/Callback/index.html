@@ -29,20 +29,23 @@
     <div id="green"></div>
     <div id="square"></div>
 
-
-
-
-
-
     <script src="../Jquery/JQueryCompressed.js"></script>
+
+
+
+
+
+    
     <script>
         function callBack(){
             console.log("Green escondido");
         }
         $("#button").click(() => {
+            // $("#green").hide(2000).show(2000)
             $("#green").hide(2000, () => {
-                $("#green").show(2000);
+                $("#square").show(2000);
             });
+            
         })
     </script>
 </body>
