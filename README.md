@@ -1,2 +1,2 @@
 # JS
-Aulas em Javascript inspirado no Curso em vídeo
+Estudo de Javascript e framework do mesmo
