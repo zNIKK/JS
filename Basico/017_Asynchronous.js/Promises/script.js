@@ -23,8 +23,10 @@ function listarUsuarios() {
     console.log(usuarios);
 }
 
-inserirUsuario("Igor").then(listarUsuarios).catch((error) => {
-    console.log(error);
-});
+inserirUsuario("Igor")
+        .then(listarUsuarios)
+        .catch((error) => {
+                console.log(error.msg);
+        });
 
 // Executar algo que não é em tempo real ou depois de qualquer intervalo de tempo de forma que não prejudique o função final

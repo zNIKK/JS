@@ -16,8 +16,13 @@ function alunoDaquiA5anos(aluno) {
     }
 
 }
+console.log("array original")
+console.log(alunos)
+console.log("array criado pelo map")
+console.log(alunos.map(alunoDaquiA5anos)); // Usa o ARRAY ORIGINAL pra criar um novo array totalmente diferente
+console.log("array original (que não se modificou)")
+console.log(alunos)
 
-console.log(alunos.map(alunoDaquiA5anos));
 
 
 // function mapear(callback) {

@@ -17,7 +17,7 @@ function idadeDaTurma(total, aluno) {
     return total + aluno.idade; 
 }
 
-console.log(alunos.reduce(idadeDaTurma, 0));
+console.log(alunos.reduce(idadeDaTurma, 0)); // vai reduzir uma array ou objeto a um valor unico como uma string ou numero 
 
 function reduzir(callback, num=0) {
     let a = []

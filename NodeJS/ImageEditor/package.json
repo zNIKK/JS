@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "pngquant-bin": "^6.0.1",
+    "sharp": "^0.31.0"
+  },
+  "devDependencies": {
+    "compress-images": "^2.0.5"
+  }
+}
