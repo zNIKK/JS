@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 const mongoose = require('mongoose');
+const path = require('path');
 
 
 const linkRoute = require('./routes/linkRoute')
@@ -32,7 +33,8 @@ db.once("open", () => {
     console.log("Banco Carregado")
     })
 
-
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, "templates"))
 
 // mongoose.connect('mongodb://localhost/links').then(db=>{
 //     console.log(db);
