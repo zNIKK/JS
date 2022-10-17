@@ -1,6 +1,6 @@
 let turmaA = ({nome: "Igor", Idade: 15})
 
-turmaB = Object.assign({}, turmaA)
+const turmaB = Object.assign({}, turmaA)
 
 turmaB.idade = 25
 
