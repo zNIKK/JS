@@ -8,9 +8,11 @@ function Pessoa(nome, preco, estoque){
 
     let estoquePrivado = estoque;
 
+
     Object.defineProperty(this, 'estoque', {
-        enumerable: true, // mostar a chave?
-        configurable: true, // é configurável ou apagavel?
+        enumerable: false,
+        configurable: false, 
+
         get: function() {
             return estoquePrivado;
         },
@@ -28,7 +30,8 @@ function Pessoa(nome, preco, estoque){
 }
 
 
-const p1 = new Pessoa('Camiseta', 20, 3)
 
-p1.estoque = 300
-console.log(p1.estoque);
+const p1 = new Pessoa('Camiseta', 20, 3)
+p1.estoque = 50
+
+console.log(p1);
