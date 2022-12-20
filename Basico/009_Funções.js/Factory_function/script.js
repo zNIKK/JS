@@ -7,14 +7,14 @@ function criaPessoa(nome, sobrenome, a,p){
         sobrenome: sobrenome,
 
         // GETTER
-
+        // get associa uma propriedade de um objeto a uma função que será chamada quando tal propriedade é acessada.
         get nomeCompleto() {
             return `${this.nome} ${this.sobrenome}` // nesse tipo de função precisa usar this para pega uma variavel da função
 
         },
 
         // SETTER
-
+        // set liga a propriedade da função para ser chamada quando existe uma tentativa de definir valor para essa propriedade.
         set nomeCompleto(valor) {
             valor = valor.split(' ');
             this.nome =valor.shift();
