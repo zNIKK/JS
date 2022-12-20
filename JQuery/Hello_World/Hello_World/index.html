@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,4 +41,47 @@
         })
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello_World</title>
+</head>
+<body>
+    <h1>Esse é um titulo H1</h1>
+
+    <h1 class="titulo">Outro titulo</h1>
+
+    <script src="../../Jquery/JQueryCompressed.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // $.noConflict();
+        // jQuery(".titulo").hide();
+
+        $(".titulo").hide();
+
+        setTimeout(() => {
+            $(".titulo").show();
+        }, 2000)
+        
+        document.querySelectorAll(".titulo")
+        .forEach((element) => {
+            element.style.display = "none"
+        })
+    </script>
+</body>
+>>>>>>> 6f99a5034bf8b64687d1bbc0c29f36e46ad1b2c3
 </html>
