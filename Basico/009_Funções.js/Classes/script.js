@@ -7,10 +7,12 @@ class Pessoa {
     falar() {
         console.log(`${this.nome} está falando.`);
     }
+
     comer() {
         console.log(`${this.nome} está comendo.`);
 
     }
+    
     beber() {
         console.log(`${this.nome} está bebendo.`);
 
@@ -19,6 +21,6 @@ class Pessoa {
 
 
 
-const p1 = new Pessoa("L    uiz", "Miranda");
+const p1 = new Pessoa("Luiz", "Miranda");
 
 console.log(p1);
