@@ -1,0 +1,2 @@
+(()=>{"use strict";var e={d:(o,r)=>{for(var t in r)e.o(r,t)&&!e.o(o,t)&&Object.defineProperty(o,t,{enumerable:!0,get:r[t]})},o:(e,o)=>Object.prototype.hasOwnProperty.call(e,o),r:e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}},o={};e.r(o),e.d(o,{XF:()=>t,V6:()=>r,RO:()=>n});var r="Miranda",t=30;function n(e,o){return e+o}console.log("joão",o.nome2,r,t),console.log(n(5,5))})();
+//# sourceMappingURL=bundle.js.map

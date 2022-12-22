@@ -1,37 +1,51 @@
-let usuarios = ["adriano", "marcia", "José"];
+function rand(min=0, max=3) {
+    min *= 1000;
+    max *= 1000;
+    return Math.floor(Math.random() * (min - max) + min);
+}
 
-function inserirUsuario(nome) {
+function esperaAi(msg, tempo) {
+    return new Promise((resolve, reject) => {
+        if (typeof msg !== 'string') reject('BAD VALUE')
 
-    let promise = new Promise(function(resolve, reject){
-        setTimeout (() => {
-            usuarios.push(nome);
-
-            // TRATAMENTO DE ERRO
-            let error = false;
-
-            if(!error){
-                resolve();
-            } else {
-                reject({msg: "Houve um erro!!"});
-            }
-            // TRATAMENTO DE ERRO
-
-        }, 1000);
-
-
+        // setTimeout => para simular o tempo de espera
+        setTimeout(() => {
+            resolve(msg);
+        }, tempo)
     })
-    return promise
 }
 
-function listarUsuarios() {
-    console.log(usuarios);
+// async / await
+
+async function executa() {
+    try {
+        const fase1 = esperaAi('Fase 1', rand())
+        console.log(fase1);
+        const fase2 = await esperaAi('Fase 2', rand())
+        console.log(fase2);
+        const fase3 = await esperaAi(2, rand())
+        console.log(fase3);
+    } catch (e) {
+        console.log(e);
+    }
 }
 
-async function executar() {
-    await inserirUsuario("Igor"); // await = So execute as subsequentes linhas se essa linha for executada corretamente
-    listarUsuarios();
+executa();
 
-} 
+// pending => pendente
+// fullfilled => resolvida
+// reject => rejeitada  
 
-executar()
+
+// esperaAi('Fase 1', rand())
+//     .then(valor => {
+//         console.log(valor)
+//         return esperaAi('Fase 2', rand())
+//     }).then(fase => {
+//         console.log(fase);
+//         return esperaAi('Fase 3', rand());
+//     }).then(fase => {
+//         console.log(fase);
+//     })
+//     .catch(e => console.log(e))
 

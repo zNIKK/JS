@@ -1,32 +1,37 @@
-let usuarios = ["adriano", "marcia", "José"];
+function rand(min, max) {
+    min *= 1000;
+    max *= 1000;
+    return Math.floor(Math.random() * (min - max) + min);
+}
 
-function inserirUsuario(nome) {
+function esperaAi(msg, tempo) {
+    return new Promise((resolve, reject) => {
+        if (typeof msg !== 'string') reject('BAD VALUE')
 
-    let promise = new Promise(function(resolve, reject){
-        setTimeout (() => {
-            usuarios.push(nome);
-
-            let error = true;
-
-            if(!error){
-                resolve();
-            } else {
-                reject({msg: "Houve um erro!!"});
-            }
-        }, 1000);
-
+        // setTimeout => para simular o tempo de espera
+        setTimeout(() => {
+            resolve(msg);
+        }, tempo)
     })
-    return promise
 }
 
-function listarUsuarios() {
-    console.log(usuarios);
-}
-
-inserirUsuario("Igor")
-        .then(listarUsuarios)
-        .catch((error) => {
-                console.log(error.msg);
-        });
-
+esperaAi('Conectando com DB...', rand(1, 3))
+    .then(resposta => {
+        console.log(resposta);
+        return esperaAi('Buscando dados...', rand(1, 3));
+    })
+    .then(resposta => {
+        console.log(resposta);
+        return esperaAi('Exibir dados...')
+    })
+    // .then(resposta => {
+    //     console.log(resposta);
+    //     esperaAi(321, rand(1, 3));
+    // })
+    .then(() => {
+        console.log("Exibir dados na tela...");
+    })
+    .catch(e => {
+        console.log("Houve um erro: ", e);
+    })
 // Executar algo que não é em tempo real ou depois de qualquer intervalo de tempo de forma que não prejudique o função final
