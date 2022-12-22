@@ -1,8 +1,8 @@
-export const nome = 'Luiz';
-export const sobrenome = 'Miranda';
+const nome = 'Luiz';
+const sobrenome = 'Miranda';
 export const idade = 30;
 
-export  function soma(x, y) {
+export function soma(x, y) {
     return x + y;
 }
 
@@ -13,4 +13,4 @@ export class Pessoa {
     }
 }
 
-// export { nome, sobrenome, idade, soma }
+export { nome as default, sobrenome }
