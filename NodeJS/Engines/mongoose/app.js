@@ -3,6 +3,7 @@ const app = express();
 const PORT = 3000;
 const mongoose = require('mongoose');
 const path = require('path');
+require('dotenv').config()
 
 
 const linkRoute = require('./routes/linkRoute')
@@ -25,13 +26,18 @@ const linkRoute = require('./routes/linkRoute')
 
 // save() = Salva as informações do documento
 
-mongoose.connect('mongodb://localhost/newLinks')
-let db = mongoose.connection;
+mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        app.emit('db pronta')
+    }).catch(e => console.log(e));
 
-db.on("error", () => {console.log("Houve um erro")});
-db.once("open", () => {
-    console.log("Banco Carregado")
-    })
+// let db = mongoose.connection;
+
+// db.on("error", () => { console.log("Houve um erro") });
+// db.once("open", () => {
+//     console.log("Banco Carregado")
+// })
+
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, "templates"))
