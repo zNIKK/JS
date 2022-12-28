@@ -4,6 +4,17 @@ const bodyParser = require("body-parser")
 const app = express();
 const aluno = require("./routes/alunos");
 const path = require('path')
+const mongoose = require('mongoose');
+require('dotenv').config();
+
+mongoose.set('strictQuery', false);
+mongoose.connect(process.env.MONGO_CONNECT_URL)
+    .then(()=> {
+        console.log('Mongo database connected');
+        app.emit('Está pronto')
+    }).catch(err => {
+        console.log(err);
+    })
 
 
 
@@ -13,8 +24,8 @@ const path = require('path')
 
 app.use("/aluno",
     bodyParser.urlencoded({ extended: true }),
-    sessionOptions,
-    flash(),
+    // sessionOptions,
+    // flash(),
     middlewares,
     aluno
 );

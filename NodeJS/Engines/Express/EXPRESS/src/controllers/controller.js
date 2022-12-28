@@ -1,3 +1,8 @@
+const model = require('../models/model');
+
+model.create({
+    
+})
 const alunos =
     [
         { id: 0, nome: "José" },
