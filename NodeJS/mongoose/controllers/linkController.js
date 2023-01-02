@@ -3,7 +3,7 @@ const Link = require('../models/Link')
 
 const redirect = async (req, res, next) => {
     let title = req.params.title;
-
+    
     try {
         let doc = await Link.findOneAndUpdate({ title }, {$inc: { click: 1 }})
         // .find({}) = fazer uma busca do elemento title no banco de dados e irá achar e colocar todos os objetos que forem iguais dentro de uma array
@@ -24,6 +24,7 @@ const addLink = async (req,res)=> {
     let link = new Link(req.body)
 
     try{
+        
         let doc = await link.save();
         res.redirect('/')
     } catch (error) {
