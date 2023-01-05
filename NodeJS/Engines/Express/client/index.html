@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World </h1>
+
+    <script>
+        fetch("http://192.168.15.28:5000/", {method: "post"}).then(res=>{
+            return res.text();
+        }).then(html => {
+            console.log(html);
+        })
+
+        fetch("http://192.168.15.28:5000/", {method: "put"}).then(res=>{
+            return res.text();
+        }).then(html => {
+            console.log(html);
+        })
+
+        fetch("http://192.168.15.28:5000/", {method: "post"}).then(res=>{
+            return res.text();
+        }).then(html => {
+            console.log(html);
+        })
+    </script>
+</body>
+</html>

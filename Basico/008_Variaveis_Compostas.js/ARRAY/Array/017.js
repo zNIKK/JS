@@ -1,4 +1,8 @@
+// Indices
+//         0 -5 -4 -3 -2 -1
+//         0  1  2  3  4  5
 let num = [5, 8, 2, 9, 3, 7]
+
 num[3] = 6  //  Trocar valor ou adicionar valor se não existir
 num.push(141)
 num.push(12)
