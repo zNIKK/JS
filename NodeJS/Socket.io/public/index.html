@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socket.Io</title>
 </head>
+
 <body>
     <div id="main">
 
     </div>
-    
+    <!-- chamar socket.io -->
     <script src="./socket.io/socket.io.js"></script>
     <script>
         const socket = io('http://localhost:3000')
+        // se a gente receber a mensagem hello_client_response posso fazer algo
 
-        socket.on('hello_client_response', (data)=>{
+        socket.on('hello_client_response', (data) => {
             console.log(data.msg);
+
+            socket.emit('hello_client_response', { msg: "Tudo certo" })
         })
     </script>
 </body>
+
 </html>

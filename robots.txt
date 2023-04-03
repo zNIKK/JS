@@ -1,0 +1,9 @@
+// robos que eu quero desabilitar para o mecanismo de pesquisa: Googlebots, Googlebots-image, Bingbot
+User-agent: Googlebots
+// só vale para o bot do google
+Disallow: /funcionarios
+
+User-agent: * // todos os robos
+Disallow: /admin
+Disallow: /images
+Allow: /Images/logo.png

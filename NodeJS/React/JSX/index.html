@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React - Hello World</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.12/babel.min.js"></script>
+
+    <script type="text/babel">
+        const root = document.querySelector('#root');
+
+        // const t1 = React.createElement("h1", { id: "Titulo principal" }, "Hello World")
+        // const t2 = React.createElement("h4", { id: "SubTitulo" }, "SubTitulo");
+
+        // const headLine = React.createElement("div", null, t1, t2)
+
+        ReactDOM.render(<div>
+                            <h1 id="Titulo principal">Hello world</h1>
+                            <h2 id="Titulo Complementar">Subtitulo</h2>
+                        </div>, root)
+    </script>
+</body>
+
+</html>
