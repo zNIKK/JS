@@ -11,8 +11,8 @@ let arrayDeStrings: Array<string> = ['a', 'b']
 let arrayDeStrings2: string[] = ['a', 'b'] // mesma coisa do de cima
 
 
-let
-pessoa: {
+
+export let pessoa: {
   nome: string,
   idade: number,
   adulto?: boolean, // ? - pode ser omitida
@@ -28,3 +28,4 @@ function soma(x:number, y: number):number {
 
 const result = soma(2,2)
 console.log(result);
+

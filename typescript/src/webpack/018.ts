@@ -1,4 +1,5 @@
-import validation from './mod';
+import '../POO/typescript-exercicio/exe';
+// import validation from './mod';
 const register: {
   form: HTMLFormElement;
   formFields: NodeListOf<HTMLElement>;
@@ -15,5 +16,5 @@ const register: {
   password2: document.querySelector('#password2') as HTMLInputElement,
 };
 
-validation(register);
+// validation(register);
 // console.log(register);

@@ -1,4 +1,7 @@
 export abstract class Personagem {
+  // classe que só serve para ser herdada para outra classe
+  protected abstract emoji: string;
+
   constructor(
     protected nome: string,
     protected ataque: number,
@@ -12,20 +15,26 @@ export abstract class Personagem {
 
   perderVida(forcaAtaque: number): void {
     this.vida -= forcaAtaque;
-    console.log(`${this.nome} agora tem ${this.vida} de vida...`);
+    console.log(`${this.emoji} ${this.nome} agora tem ${this.vida} de vida...`);
   }
 
   abstract bordao(): void;
+  // função que só serve para ser herdada para outra classe
+  // não precisa de valor ou de corpo para ela
 }
 
 export class Guerreira extends Personagem {
+  protected emoji = '\u{1F9DD}';
+
   bordao(): void {
-    console.log('GUERREIRAAA AOOO ATAQUEEEE!!!');
+    console.log(this.emoji + ' GUERREIRAAA AOOO ATAQUEEEE!!!');
   }
 }
 export class Monstro extends Personagem {
+  protected emoji = '\u{1F9DF}';
+
   bordao(): void {
-    console.log('AHHRRRRR! !!!');
+    console.log(this.emoji + ' AHHRRRRR!!!!');
   }
 }
 
