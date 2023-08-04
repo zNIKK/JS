@@ -12,10 +12,8 @@ describe('Primitive Values', () => {
     expect(number).not.toBeNull();
 
     expect(number).toHaveProperty('toString') // checar se existe a propriedate "toString" dentro de number
-
-
-
   })
+  
   it('should split test', () => {
     const number = 10;
     expect(number).toBe(10);
