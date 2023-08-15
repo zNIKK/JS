@@ -9,13 +9,16 @@ export class MainDishBuilder implements MealBuilderProtocol {
     this._meal = new MealBox();
     return this;
   }
+
   makeMeal(): this {
     const rice = new Rice('Arroz', 5);
     const beans = new Beans('Feijão', 10);
     const meat = new Meat('Carne', 20);
+
     this._meal.add(rice, beans, meat);
     return this;
   }
+
   makeBeverage(): this {
     const beverage = new Beverage('Bebida', 7);
     this._meal.add(beverage);
@@ -29,7 +32,6 @@ export class MainDishBuilder implements MealBuilderProtocol {
   }
 
   getMeal(): MealBox {
-    this.reset();
     return this._meal;
   }
 

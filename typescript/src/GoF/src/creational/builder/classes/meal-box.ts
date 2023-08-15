@@ -1,6 +1,7 @@
 import { MealCompositeProtocol } from '../interface/meal-composite-protocol';
 
 export class MealBox implements MealCompositeProtocol {
+  name: string;
   private readonly _children: MealCompositeProtocol[] = [];
 
   getPrice(): number {

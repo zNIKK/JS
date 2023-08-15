@@ -14,16 +14,14 @@ export class ValidateEmail extends ValidationComponent {
 // Leaf
 export class ValidateNumber extends ValidationComponent {
   validate(value: unknown): boolean {
-    if (typeof value !== 'number') return false;
-    return /@/.test(value);
+    return typeof value === 'number';
   }
 }
 
 // Leaf
 export class ValidateString extends ValidationComponent {
   validate(value: unknown): boolean {
-    if (typeof value !== 'string') return false;
-    return /@/.test(value);
+    return typeof value === 'string';
   }
 }
 
@@ -47,4 +45,4 @@ export class ValidationComposite extends ValidationComponent {
 const validateEmail = new ValidateEmail();
 const validateNumber = new ValidateNumber();
 const validateString = new ValidateString();
-const validateComposite = new ValidateComposite();
+const validateComposite = new ValidationComposite();

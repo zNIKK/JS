@@ -17,7 +17,6 @@ export class VeganDishBuilder implements MealBuilderProtocol {
   }
 
   getMeal(): MealBox {
-    this.reset();
     return this._meal;
   }
 
